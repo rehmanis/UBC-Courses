@@ -1,0 +1,134 @@
+|binary_addsub_with_latch
+LEDR8 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SW9 => binary_addsub:inst.sub
+SW9 => binary_addsub:inst.carry_in
+SW9 => inst1.IN1
+KEY1 => 74374b:U01.CLK
+SW[0] => 74374b:U01.D[1]
+SW[0] => 74374b:U02.D[1]
+SW[1] => 74374b:U01.D[2]
+SW[1] => 74374b:U02.D[2]
+SW[2] => 74374b:U01.D[3]
+SW[2] => 74374b:U02.D[3]
+SW[3] => 74374b:U01.D[4]
+SW[3] => 74374b:U02.D[4]
+SW[4] => 74374b:U01.D[5]
+SW[4] => 74374b:U02.D[5]
+SW[5] => 74374b:U01.D[6]
+SW[5] => 74374b:U02.D[6]
+SW[6] => 74374b:U01.D[7]
+SW[6] => 74374b:U02.D[7]
+SW[7] => 74374b:U01.D[8]
+SW[7] => 74374b:U02.D[8]
+KEY0 => 74374b:U02.CLK
+LED[0] <= binary_addsub:inst.sum[0]
+LED[1] <= binary_addsub:inst.sum[1]
+LED[2] <= binary_addsub:inst.sum[2]
+LED[3] <= binary_addsub:inst.sum[3]
+LED[4] <= binary_addsub:inst.sum[4]
+LED[5] <= binary_addsub:inst.sum[5]
+LED[6] <= binary_addsub:inst.sum[6]
+LED[7] <= binary_addsub:inst.sum[7]
+
+
+|binary_addsub_with_latch|binary_addsub:inst
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => _.DATAD
+a[4] => _.DATAD
+a[5] => _.DATAD
+a[6] => _.DATAD
+a[7] => _.DATAD
+b[0] => b_temp[0].DATAA
+b[0] => b_temp[0].DATAB
+b[1] => b_temp[1].DATAA
+b[1] => b_temp[1].DATAB
+b[2] => b_temp[2].DATAA
+b[2] => b_temp[2].DATAB
+b[3] => b_temp[3].DATAA
+b[3] => b_temp[3].DATAB
+b[4] => b_temp[4].DATAA
+b[4] => b_temp[4].DATAB
+b[5] => b_temp[5].DATAA
+b[5] => b_temp[5].DATAB
+b[6] => b_temp[6].DATAA
+b[6] => b_temp[6].DATAB
+b[7] => b_temp[7].DATAA
+b[7] => b_temp[7].DATAB
+sub => b_temp[7].OUTPUTSELECT
+sub => b_temp[6].OUTPUTSELECT
+sub => b_temp[5].OUTPUTSELECT
+sub => b_temp[4].OUTPUTSELECT
+sub => b_temp[3].OUTPUTSELECT
+sub => b_temp[2].OUTPUTSELECT
+sub => b_temp[1].OUTPUTSELECT
+sub => b_temp[0].OUTPUTSELECT
+carry_in => _.DATAB
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+sum[3] <= _.SUM_OUT
+sum[4] <= _.SUM_OUT
+sum[5] <= _.SUM_OUT
+sum[6] <= _.SUM_OUT
+sum[7] <= _.SUM_OUT
+carry <= _.SUM_OUT
+
+
+|binary_addsub_with_latch|74374b:U01
+Q8 <= 49.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 20.CLK
+CLK => 19.CLK
+CLK => 18.CLK
+CLK => 17.CLK
+CLK => 16.CLK
+CLK => 15.CLK
+CLK => 14.CLK
+CLK => 13.CLK
+D8 => 20.DATAIN
+OEN => 51.IN0
+Q7 <= 48.DB_MAX_OUTPUT_PORT_TYPE
+D7 => 19.DATAIN
+Q6 <= 47.DB_MAX_OUTPUT_PORT_TYPE
+D6 => 18.DATAIN
+Q5 <= 46.DB_MAX_OUTPUT_PORT_TYPE
+D5 => 17.DATAIN
+Q4 <= 45.DB_MAX_OUTPUT_PORT_TYPE
+D4 => 16.DATAIN
+Q3 <= 44.DB_MAX_OUTPUT_PORT_TYPE
+D3 => 15.DATAIN
+Q2 <= 43.DB_MAX_OUTPUT_PORT_TYPE
+D2 => 14.DATAIN
+Q1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
+D1 => 13.DATAIN
+
+
+|binary_addsub_with_latch|74374b:U02
+Q8 <= 49.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 20.CLK
+CLK => 19.CLK
+CLK => 18.CLK
+CLK => 17.CLK
+CLK => 16.CLK
+CLK => 15.CLK
+CLK => 14.CLK
+CLK => 13.CLK
+D8 => 20.DATAIN
+OEN => 51.IN0
+Q7 <= 48.DB_MAX_OUTPUT_PORT_TYPE
+D7 => 19.DATAIN
+Q6 <= 47.DB_MAX_OUTPUT_PORT_TYPE
+D6 => 18.DATAIN
+Q5 <= 46.DB_MAX_OUTPUT_PORT_TYPE
+D5 => 17.DATAIN
+Q4 <= 45.DB_MAX_OUTPUT_PORT_TYPE
+D4 => 16.DATAIN
+Q3 <= 44.DB_MAX_OUTPUT_PORT_TYPE
+D3 => 15.DATAIN
+Q2 <= 43.DB_MAX_OUTPUT_PORT_TYPE
+D2 => 14.DATAIN
+Q1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
+D1 => 13.DATAIN
+
+
